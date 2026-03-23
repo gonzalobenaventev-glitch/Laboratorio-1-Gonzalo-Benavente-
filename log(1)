@@ -1,0 +1,2156 @@
+Thu Mar 19 07:06:30 PM UTC 2026: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:4: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   49 |    front(L) = NULL;
+      |    ^~~~~
+exercises.c:49:13: error: lvalue required as left operand of assignment
+   49 |    front(L) = NULL;
+      |             ^
+exercises.c:53:25: error: passing argument 2 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   53 |          pushCurrent(L, i);
+      |                         ^
+      |                         |
+      |                         int
+In file included from exercises.c:6:
+arraylist.h:23:33: note: expected ‘void *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                           ~~~~~~^~~~
+exercises.c: In function ‘sumaLista’:
+exercises.c:69:4: error: statement with no effect [-Werror=unused-value]
+   69 |    (int *)L;
+      |    ^~~~~~~~
+exercises.c:73:19: error: invalid use of undefined type ‘struct List’
+   73 |          suma += L[i];
+      |                   ^
+exercises.c:73:18: error: invalid use of incomplete typedef ‘List’
+   73 |          suma += L[i];
+      |                  ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:92:15: error: invalid use of undefined type ‘struct List’
+   92 |          if (L[i] == elem)
+      |               ^
+exercises.c:92:14: error: invalid use of incomplete typedef ‘List’
+   92 |          if (L[i] == elem)
+      |              ^
+exercises.c:94:26: error: expected ‘;’ before ‘}’ token
+   94 |             popCurrent(L)
+      |                          ^
+      |                          ;
+   95 |          }
+      |          ~                
+exercises.c: In function ‘copia_pila’:
+exercises.c:108:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  108 |    Stack* aux;
+      |           ^~~
+cc1: all warnings being treated as errors
+02fc269
+Thu Mar 19 07:24:14 PM UTC 2026: 
+ exercises.c | 10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:14: error: invalid use of incomplete typedef ‘List’
+   46 |    List* L = (*L)malloc(sizeof(L));
+      |              ^
+exercises.c:46:18: error: expected ‘,’ or ‘;’ before ‘malloc’
+   46 |    List* L = (*L)malloc(sizeof(L));
+      |                  ^~~~~~
+exercises.c:50:25: error: passing argument 2 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   50 |          pushCurrent(L, i);
+      |                         ^
+      |                         |
+      |                         int
+In file included from exercises.c:6:
+arraylist.h:23:33: note: expected ‘void *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                           ~~~~~~^~~~
+exercises.c: In function ‘sumaLista’:
+exercises.c:66:4: error: statement with no effect [-Werror=unused-value]
+   66 |    (int *)L;
+      |    ^~~~~~~~
+exercises.c:70:19: error: invalid use of undefined type ‘struct List’
+   70 |          suma += L[i];
+      |                   ^
+exercises.c:70:18: error: invalid use of incomplete typedef ‘List’
+   70 |          suma += L[i];
+      |                  ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:87:4: error: statement with no effect [-Werror=unused-value]
+   87 |    (int*) L;
+      |    ^~~~~~~~
+exercises.c:90:15: error: invalid use of undefined type ‘struct List’
+   90 |          if (L[i] == elem)
+      |               ^
+exercises.c:90:14: error: invalid use of incomplete typedef ‘List’
+   90 |          if (L[i] == elem)
+      |              ^
+cc1: all warnings being treated as errors
+c466fbb
+Fri Mar 20 06:44:07 PM UTC 2026: 
+ exercises.c | 28 ++++++----------------------
+ 1 file changed, 6 insertions(+), 22 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:4: error: variable ‘L’ has initializer but incomplete type
+   46 |    List L = create_list();
+      |    ^~~~
+exercises.c:46:9: error: storage size of ‘L’ isn’t known
+   46 |    List L = create_list();
+      |         ^
+exercises.c:46:9: error: unused variable ‘L’ [-Werror=unused-variable]
+exercises.c: In function ‘copia_pila’:
+exercises.c:90:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   90 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:106:1: error: control reaches end of non-void function [-Werror=return-type]
+  106 | }
+      | ^
+cc1: all warnings being treated as errors
+00c40e4
+Fri Mar 20 06:44:43 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:9: error: array type has incomplete element type ‘List’
+   46 |    List L[10] = create_list();
+      |         ^
+exercises.c:46:9: error: unused variable ‘L’ [-Werror=unused-variable]
+exercises.c: In function ‘copia_pila’:
+exercises.c:90:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   90 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:106:1: error: control reaches end of non-void function [-Werror=return-type]
+  106 | }
+      | ^
+cc1: all warnings being treated as errors
+56cc063
+Fri Mar 20 06:45:11 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:9: error: array type has incomplete element type ‘List’
+   46 |    List L[] = create_list();
+      |         ^
+exercises.c:46:9: error: unused variable ‘L’ [-Werror=unused-variable]
+exercises.c: In function ‘copia_pila’:
+exercises.c:90:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   90 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:106:1: error: control reaches end of non-void function [-Werror=return-type]
+  106 | }
+      | ^
+cc1: all warnings being treated as errors
+143737d
+Fri Mar 20 06:45:32 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:90:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   90 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:106:1: error: control reaches end of non-void function [-Werror=return-type]
+  106 | }
+      | ^
+cc1: all warnings being treated as errors
+26539ee
+Fri Mar 20 06:55:19 PM UTC 2026: 
+ exercises.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:19: error: invalid use of incomplete typedef ‘List’
+   52 |             first(*L);
+      |                   ^~
+exercises.c:53:14: error: invalid use of undefined type ‘struct List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:53:18: error: invalid use of incomplete typedef ‘List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c:57:18: error: invalid use of incomplete typedef ‘List’
+   57 |             next(*L);
+      |                  ^~
+exercises.c:58:14: error: invalid use of undefined type ‘struct List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:58:18: error: invalid use of incomplete typedef ‘List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+0277607
+Fri Mar 20 06:56:29 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:53:14: error: invalid use of undefined type ‘struct List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:53:18: error: invalid use of incomplete typedef ‘List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c:58:14: error: invalid use of undefined type ‘struct List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:58:18: error: invalid use of incomplete typedef ‘List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+037cb44
+Fri Mar 20 06:57:22 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:53:14: error: invalid use of undefined type ‘struct List’
+   53 |             L[i] = (List) malloc (sizeof(List));
+      |              ^
+exercises.c:53:42: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   53 |             L[i] = (List) malloc (sizeof(List));
+      |                                          ^~~~
+exercises.c:53:18: error: invalid use of incomplete typedef ‘List’
+   53 |             L[i] = (List) malloc (sizeof(List));
+      |                  ^
+exercises.c:58:14: error: invalid use of undefined type ‘struct List’
+   58 |             L[i] = (List) malloc (sizeof(List));
+      |              ^
+exercises.c:58:42: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   58 |             L[i] = (List) malloc (sizeof(List));
+      |                                          ^~~~
+exercises.c:58:18: error: invalid use of incomplete typedef ‘List’
+   58 |             L[i] = (List) malloc (sizeof(List));
+      |                  ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+82a3bcd
+Fri Mar 20 06:58:40 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:53:14: error: invalid use of undefined type ‘struct List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:53:18: error: invalid use of incomplete typedef ‘List’
+   53 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c:58:14: error: invalid use of undefined type ‘struct List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |              ^
+exercises.c:58:18: error: invalid use of incomplete typedef ‘List’
+   58 |             L[i] = (List*) malloc (sizeof(List*));
+      |                  ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+53cd0f9
+Fri Mar 20 07:00:56 PM UTC 2026: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:58:11: error: invalid use of undefined type ‘struct List’
+   58 |          L[i] = (List*) malloc (sizeof(List*));
+      |           ^
+exercises.c:58:15: error: invalid use of incomplete typedef ‘List’
+   58 |          L[i] = (List*) malloc (sizeof(List*));
+      |               ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:102:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  102 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+  118 | }
+      | ^
+cc1: all warnings being treated as errors
+494ca26
+Fri Mar 20 07:03:48 PM UTC 2026: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:62:15: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |               ^
+exercises.c:62:15: note: (near initialization for ‘L’)
+exercises.c:62:18: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                  ^
+exercises.c:62:18: note: (near initialization for ‘L’)
+exercises.c:62:21: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                     ^
+exercises.c:62:21: note: (near initialization for ‘L’)
+exercises.c:62:24: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                        ^
+exercises.c:62:24: note: (near initialization for ‘L’)
+exercises.c:62:27: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                           ^
+exercises.c:62:27: note: (near initialization for ‘L’)
+exercises.c:62:30: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                              ^
+exercises.c:62:30: note: (near initialization for ‘L’)
+exercises.c:62:33: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                                 ^
+exercises.c:62:33: note: (near initialization for ‘L’)
+exercises.c:62:36: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                                    ^
+exercises.c:62:36: note: (near initialization for ‘L’)
+exercises.c:62:39: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                                       ^
+exercises.c:62:39: note: (near initialization for ‘L’)
+exercises.c:62:42: error: excess elements in scalar initializer [-Werror]
+   62 |    List* L = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      |                                          ^~
+exercises.c:62:42: note: (near initialization for ‘L’)
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+0761687
+Fri Mar 20 07:04:29 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:62:14: error: expected expression before ‘[’ token
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |              ^
+exercises.c:62:16: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                ^
+exercises.c:62:19: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                   ^
+exercises.c:62:22: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                      ^
+exercises.c:62:25: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                         ^
+exercises.c:62:28: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                            ^
+exercises.c:62:31: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                               ^
+exercises.c:62:34: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                                  ^
+exercises.c:62:37: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                                     ^
+exercises.c:62:40: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   62 |    List* L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      |                                        ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+9e2e7b5
+Fri Mar 20 07:05:28 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:62:9: error: array type has incomplete element type ‘List’
+   62 |    List L[10];
+      |         ^
+exercises.c:62:9: error: unused variable ‘L’ [-Werror=unused-variable]
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:1: error: control reaches end of non-void function [-Werror=return-type]
+   66 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+543beec
+Fri Mar 20 07:05:45 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:65:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   65 |    return L;
+      |           ^
+exercises.c:65:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+2dd30fb
+Fri Mar 20 07:07:44 PM UTC 2026: 
+ exercises.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:40: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L[i] = (List*) malloc (sizeof(List));
+      |                                        ^~~~
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  111 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+  127 | }
+      | ^
+cc1: all warnings being treated as errors
+2f75dbd
+Fri Mar 20 07:10:06 PM UTC 2026: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:37: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L = (List*) malloc (sizeof(List));
+      |                                     ^~~~
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+c52232a
+Fri Mar 20 07:10:48 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:11: error: ‘(List **)&L’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+   66 |          L->i = (List*) malloc (sizeof(List);
+      |           ^~
+      |          -
+      |          (*L)
+exercises.c:66:40: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L->i = (List*) malloc (sizeof(List);
+      |                                        ^~~~
+exercises.c:66:45: error: expected ‘)’ before ‘;’ token
+   66 |          L->i = (List*) malloc (sizeof(List);
+      |                                ~            ^
+      |                                             )
+exercises.c:68:14: error: expected ‘;’ before ‘}’ token
+   68 |          i++;
+      |              ^
+      |              ;
+   69 |       }
+      |       ~       
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+5b009bb
+Fri Mar 20 07:11:26 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:40: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L[i] = (List*) malloc (sizeof(List);
+      |                                        ^~~~
+exercises.c:66:45: error: expected ‘)’ before ‘;’ token
+   66 |          L[i] = (List*) malloc (sizeof(List);
+      |                                ~            ^
+      |                                             )
+exercises.c:68:14: error: expected ‘;’ before ‘}’ token
+   68 |          i++;
+      |              ^
+      |              ;
+   69 |       }
+      |       ~       
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+5848508
+Fri Mar 20 07:12:27 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:39: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L[i] = (List) malloc (sizeof(List);
+      |                                       ^~~~
+exercises.c:66:44: error: expected ‘)’ before ‘;’ token
+   66 |          L[i] = (List) malloc (sizeof(List);
+      |                               ~            ^
+      |                                            )
+exercises.c:68:14: error: expected ‘;’ before ‘}’ token
+   68 |          i++;
+      |              ^
+      |              ;
+   69 |       }
+      |       ~       
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+2908009
+Fri Mar 20 07:13:09 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:66:40: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   66 |          L[i] = (List*) malloc (sizeof(List));
+      |                                        ^~~~
+exercises.c:72:11: error: returning ‘List **’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   72 |    return L;
+      |           ^
+exercises.c:72:11: error: function returns address of local variable [-Werror=return-local-addr]
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+6759c78
+Fri Mar 20 07:14:17 PM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:58:11: error: invalid use of undefined type ‘struct List’
+   58 |          L[i] = (List*) malloc (sizeof(List*));
+      |           ^
+exercises.c:58:15: error: invalid use of incomplete typedef ‘List’
+   58 |          L[i] = (List*) malloc (sizeof(List*));
+      |               ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:114:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  114 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+94e3d18
+Fri Mar 20 07:18:42 PM UTC 2026: 
+ exercises.c | 14 +-------------
+ 1 file changed, 1 insertion(+), 13 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:4: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   48 |    front(L) = 1;
+      |    ^~~~~
+exercises.c:48:13: error: lvalue required as left operand of assignment
+   48 |    front(L) = 1;
+      |             ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:102:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  102 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+  118 | }
+      | ^
+cc1: all warnings being treated as errors
+24ac594
+Fri Mar 20 07:26:02 PM UTC 2026: 
+ exercises.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:13: error: expected identifier or ‘(’ before ‘=’ token
+   48 |    for (int = 0; i < 10; i++)
+      |             ^
+exercises.c:48:18: error: ‘i’ undeclared (first use in this function)
+   48 |    for (int = 0; i < 10; i++)
+      |                  ^
+exercises.c:48:18: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:52:37: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   52 |          L = (List*) malloc (sizeof(List));
+      |                                     ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+0a468d0
+Fri Mar 20 07:26:23 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:23: error: initialization of ‘void *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   50 |          void *dato = i;
+      |                       ^
+exercises.c:52:37: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   52 |          L = (List*) malloc (sizeof(List));
+      |                                     ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+a1799d1
+Fri Mar 20 07:26:57 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:23: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   50 |          void *dato = (void*) i;
+      |                       ^
+exercises.c:52:37: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   52 |          L = (List*) malloc (sizeof(List));
+      |                                     ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+657cbdf
+Fri Mar 20 07:27:28 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:51:25: error: passing argument 2 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   51 |          pushCurrent(L, dato);
+      |                         ^~~~
+      |                         |
+      |                         int
+In file included from exercises.c:6:
+arraylist.h:23:33: note: expected ‘void *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                           ~~~~~~^~~~
+exercises.c:52:37: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   52 |          L = (List*) malloc (sizeof(List));
+      |                                     ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+f7b3b09
+Fri Mar 20 07:28:54 PM UTC 2026: 
+ exercises.c | 17 -----------------
+ 1 file changed, 17 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:10: error: unused variable ‘L’ [-Werror=unused-variable]
+   46 |    List* L = create_list();
+      |          ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:89:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   89 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
+   48 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:105:1: error: control reaches end of non-void function [-Werror=return-type]
+  105 | }
+      | ^
+cc1: all warnings being treated as errors
+dc511c8
+Fri Mar 20 07:29:18 PM UTC 2026: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:91:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   91 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:107:1: error: control reaches end of non-void function [-Werror=return-type]
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+d387cab
+Fri Mar 20 07:31:22 PM UTC 2026: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:4: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   48 |    front(*L);
+      |    ^~~~~
+exercises.c:48:10: error: invalid use of incomplete typedef ‘List’
+   48 |    front(*L);
+      |          ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   93 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+33c658e
+Fri Mar 20 07:31:39 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:4: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   48 |    front(L);
+      |    ^~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   93 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+488cf08
+Fri Mar 20 07:33:11 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   93 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+5e8162f
+Fri Mar 20 07:37:05 PM UTC 2026: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:12: error: invalid use of incomplete typedef ‘List’
+   50 |    while (L->current != NULL)
+      |            ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:98:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   98 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:114:1: error: control reaches end of non-void function [-Werror=return-type]
+  114 | }
+      | ^
+cc1: all warnings being treated as errors
+7d05681
+Fri Mar 20 07:40:00 PM UTC 2026: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:11: error: invalid use of incomplete typedef ‘List’
+   52 |          L->current++;
+      |           ^~
+exercises.c:53:11: error: invalid use of incomplete typedef ‘List’
+   53 |          L->size++;
+      |           ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:100:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  100 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:116:1: error: control reaches end of non-void function [-Werror=return-type]
+  116 | }
+      | ^
+cc1: all warnings being treated as errors
+abaffbe
+Fri Mar 20 07:44:38 PM UTC 2026: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:99:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   99 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:1: error: control reaches end of non-void function [-Werror=return-type]
+  115 | }
+      | ^
+cc1: all warnings being treated as errors
+6f7b5c5
+Fri Mar 20 07:52:58 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:99:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   99 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:1: error: control reaches end of non-void function [-Werror=return-type]
+  115 | }
+      | ^
+cc1: all warnings being treated as errors
+e315d3c
+Fri Mar 20 08:00:14 PM UTC 2026: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:9: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    suma += (int*)first(L);
+      |         ^~
+exercises.c:77:15: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          suma += (int*)next(L)
+      |               ^~
+exercises.c:77:31: error: expected ‘;’ before ‘}’ token
+   77 |          suma += (int*)next(L)
+      |                               ^
+      |                               ;
+   78 |       }
+      |       ~                        
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+00f102d
+Fri Mar 20 08:00:52 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:9: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    suma += first(L);
+      |         ^~
+exercises.c:77:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+24d0c90
+Fri Mar 20 08:01:23 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:12: error: dereferencing ‘void *’ pointer [-Werror]
+   71 |    suma += *first(L);
+      |            ^~~~~~~~~
+exercises.c:71:12: error: void value not ignored as it ought to be
+exercises.c:77:18: error: dereferencing ‘void *’ pointer [-Werror]
+   77 |          suma += *next(L);
+      |                  ^~~~~~~~
+exercises.c:77:18: error: void value not ignored as it ought to be
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+404216d
+Fri Mar 20 08:01:46 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:18: error: invalid use of incomplete typedef ‘List’
+   71 |    suma += first(*L);
+      |                  ^~
+exercises.c:77:18: error: dereferencing ‘void *’ pointer [-Werror]
+   77 |          suma += *next(L);
+      |                  ^~~~~~~~
+exercises.c:77:18: error: void value not ignored as it ought to be
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+6dab31d
+Fri Mar 20 08:02:19 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:9: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    suma += first(L);
+      |         ^~
+exercises.c:77:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+5929a5b
+Fri Mar 20 08:02:43 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:4: error: invalid type argument of unary ‘*’ (have ‘int’)
+   71 |    *suma += first(L);
+      |    ^~~~~
+exercises.c:77:10: error: invalid type argument of unary ‘*’ (have ‘int’)
+   77 |          *suma += next(L);
+      |          ^~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+31ef269
+Fri Mar 20 08:03:21 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:10: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    *suma += first(L);
+      |          ^~
+exercises.c:77:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          *suma += next(L);
+      |                ^~
+exercises.c:80:11: error: returning ‘int *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   80 |    return suma;
+      |           ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+f654536
+Fri Mar 20 08:03:48 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:10: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    *suma += (int*)first(L);
+      |          ^~
+exercises.c:77:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          *suma += next(L);
+      |                ^~
+exercises.c:80:11: error: returning ‘int *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   80 |    return suma;
+      |           ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+b988d9e
+Fri Mar 20 08:05:26 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:9: error: invalid operands to binary + (have ‘int *’ and ‘int *’)
+   71 |    suma += (int*)first(L);
+      |         ^~ ~~~~~~~~~~~~~~
+      |            |
+      |            int *
+exercises.c:77:15: error: invalid operands to binary + (have ‘int *’ and ‘void *’)
+   77 |          suma += next(L);
+      |               ^~ ~~~~~~~
+      |                  |
+      |                  void *
+exercises.c:80:11: error: returning ‘int *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   80 |    return suma;
+      |           ^~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+39fcdc4
+Fri Mar 20 08:06:02 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:9: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |    suma += (int*)first(L);
+      |         ^~
+exercises.c:77:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  106 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+cc1: all warnings being treated as errors
+4a9fd2f
+Fri Mar 20 08:06:54 PM UTC 2026: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:69:12: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   69 |    suma += front(L);
+      |            ^~~~~
+exercises.c:75:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   75 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+824cd99
+Fri Mar 20 08:07:45 PM UTC 2026: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:4: error: ‘suma’ undeclared (first use in this function)
+   68 |    suma = first(L);
+      |    ^~~~
+exercises.c:68:4: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘sumaLista’:
+exercises.c:78:1: error: control reaches end of non-void function [-Werror=return-type]
+   78 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+199b910
+Fri Mar 20 08:08:05 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   68 |    int suma = first(L);
+      |               ^~~~~
+exercises.c:74:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   74 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+326c7bf
+Fri Mar 20 08:08:34 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:15: error: initialization of ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   68 |    int suma = (int*)first(L);
+      |               ^
+exercises.c:74:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   74 |          suma += next(L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  103 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+310bcf0
+Fri Mar 20 08:10:01 PM UTC 2026: 
+ exercises.c | 9 ++-------
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:98:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   98 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:114:1: error: control reaches end of non-void function [-Werror=return-type]
+  114 | }
+      | ^
+cc1: all warnings being treated as errors
+fed512e
+Fri Mar 20 08:15:28 PM UTC 2026: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:72:19: error: invalid use of undefined type ‘struct List’
+   72 |          suma += L[i];
+      |                   ^
+exercises.c:72:18: error: invalid use of incomplete typedef ‘List’
+   72 |          suma += L[i];
+      |                  ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:101:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  101 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:117:1: error: control reaches end of non-void function [-Werror=return-type]
+  117 | }
+      | ^
+cc1: all warnings being treated as errors
+ecc1754
+Fri Mar 20 08:16:11 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:72:15: error: invalid use of undefined type ‘struct List’
+   72 |          suma += L;
+      |               ^~
+exercises.c:72:15: error: assignment to ‘int’ from ‘List *’ makes integer from pointer without a cast [-Wint-conversion]
+exercises.c: In function ‘copia_pila’:
+exercises.c:101:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  101 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:117:1: error: control reaches end of non-void function [-Werror=return-type]
+  117 | }
+      | ^
+cc1: all warnings being treated as errors
+192cc94
+Fri Mar 20 08:17:58 PM UTC 2026: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:72:25: error: invalid use of undefined type ‘struct List’
+   72 |          suma += (int*)L[i];
+      |                         ^
+exercises.c:72:24: error: invalid use of incomplete typedef ‘List’
+   72 |          suma += (int*)L[i];
+      |                        ^
+exercises.c: In function ‘copia_pila’:
+exercises.c:102:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  102 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+  118 | }
+      | ^
+cc1: all warnings being treated as errors
+b6be084
+Fri Mar 20 09:49:05 PM UTC 2026: 
+ exercises.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:70:16: error: invalid use of incomplete typedef ‘List’
+   70 |    while (next(*L) != NULL)
+      |                ^~
+exercises.c:72:15: error: invalid use of incomplete typedef ‘List’
+   72 |          next(*L);
+      |               ^~
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:16: error: invalid use of incomplete typedef ‘List’
+   89 |    while (next(*L) != NULL)
+      |                ^~
+exercises.c:91:15: error: invalid use of incomplete typedef ‘List’
+   91 |          next(*L);
+      |               ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  104 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+08b1c0c
+Fri Mar 20 09:52:15 PM UTC 2026: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:70:16: error: invalid use of incomplete typedef ‘List’
+   70 |    while (next(*L) != NULL)
+      |                ^~
+exercises.c:72:15: error: invalid use of incomplete typedef ‘List’
+   72 |          next(*L);
+      |               ^~
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:91:16: error: comparison between pointer and integer [-Werror]
+   91 |          if(&L == elem)
+      |                ^~
+exercises.c:93:13: error: too many arguments to function ‘popCurrent’
+   93 |             popCurrent(L, elem);
+      |             ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c:97:18: error: invalid use of incomplete typedef ‘List’
+   97 |             next(*L);
+      |                  ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  111 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+  127 | }
+      | ^
+cc1: all warnings being treated as errors
+60e75f1
+Fri Mar 20 09:57:04 PM UTC 2026: 
+ exercises.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:97:16: error: comparison between pointer and integer [-Werror]
+   97 |          if(&L == elem)
+      |                ^~
+exercises.c:99:13: error: too many arguments to function ‘popCurrent’
+   99 |             popCurrent(L, elem);
+      |             ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c:103:18: error: invalid use of incomplete typedef ‘List’
+  103 |             next(*L);
+      |                  ^~
+exercises.c: In function ‘copia_pila’:
+exercises.c:117:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  117 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:1: error: control reaches end of non-void function [-Werror=return-type]
+  133 | }
+      | ^
+cc1: all warnings being treated as errors
+a682121
+Fri Mar 20 09:57:45 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:97:16: error: comparison between pointer and integer [-Werror]
+   97 |          if(&L == elem)
+      |                ^~
+exercises.c:99:24: error: passing argument 1 of ‘popCurrent’ from incompatible pointer type [-Wincompatible-pointer-types]
+   99 |             popCurrent(&L, elem);
+      |                        ^~
+      |                        |
+      |                        List **
+In file included from exercises.c:6:
+arraylist.h:32:24: note: expected ‘List *’ but argument is of type ‘List **’
+   32 | void *popCurrent(List *L);
+      |                  ~~~~~~^
+exercises.c:99:13: error: too many arguments to function ‘popCurrent’
+   99 |             popCurrent(&L, elem);
+      |             ^~~~~~~~~~
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:117:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  117 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:1: error: control reaches end of non-void function [-Werror=return-type]
+  133 | }
+      | ^
+cc1: all warnings being treated as errors
+a2cf3e7
+Fri Mar 20 09:58:41 PM UTC 2026: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:76:15: error: invalid use of undefined type ‘struct List’
+   76 |          suma += L;
+      |               ^~
+exercises.c:76:15: error: assignment to ‘int’ from ‘List *’ makes integer from pointer without a cast [-Wint-conversion]
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:99:15: error: comparison between pointer and integer [-Werror]
+   99 |          if(L == elem)
+      |               ^~
+exercises.c:101:13: error: too many arguments to function ‘popCurrent’
+  101 |             popCurrent(L, elem);
+      |             ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:119:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  119 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+b9e8b5c
+Fri Mar 20 10:00:02 PM UTC 2026: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:76:15: error: invalid use of undefined type ‘struct List’
+   76 |          suma += L;
+      |               ^~
+exercises.c:76:15: error: assignment to ‘int’ from ‘List *’ makes integer from pointer without a cast [-Wint-conversion]
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:98:15: error: comparison between pointer and integer [-Werror]
+   98 |          if(L == elem)
+      |               ^~
+exercises.c:100:13: error: too many arguments to function ‘popCurrent’
+  100 |             popCurrent(L, elem);
+      |             ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:118:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  118 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:1: error: control reaches end of non-void function [-Werror=return-type]
+  134 | }
+      | ^
+cc1: all warnings being treated as errors
+9751866
+Fri Mar 20 10:01:56 PM UTC 2026: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:79:22: error: comparison between pointer and integer [-Werror]
+   79 |    for (int i = 0; i < get_size; i++)
+      |                      ^
+exercises.c:81:10: error: ‘suma’ undeclared (first use in this function)
+   81 |          suma += L[i];
+      |          ^~~~
+exercises.c:81:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:81:19: error: invalid use of undefined type ‘struct List’
+   81 |          suma += L[i];
+      |                   ^
+exercises.c:81:18: error: invalid use of incomplete typedef ‘List’
+   81 |          suma += L[i];
+      |                  ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:105:15: error: comparison between pointer and integer [-Werror]
+  105 |          if(L == elem)
+      |               ^~
+exercises.c:107:13: error: too many arguments to function ‘popCurrent’
+  107 |             popCurrent(L, elem);
+      |             ^~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:125:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+  125 |    Stack* aux;
+      |           ^~~
+exercises.c: In function ‘sumaLista’:
+exercises.c:87:1: error: control reaches end of non-void function [-Werror=return-type]
+   87 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:141:1: error: control reaches end of non-void function [-Werror=return-type]
+  141 | }
+      | ^
+cc1: all warnings being treated as errors
+373184d
+Fri Mar 20 10:03:04 PM UTC 2026: 
+ exercises.c | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:79:11: error: ‘suma’ undeclared (first use in this function)
+   79 |    return suma;
+      |           ^~~~
+exercises.c:79:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:80:1: error: control reaches end of non-void function [-Werror=return-type]
+   80 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+8a33130
+Fri Mar 20 10:03:39 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+c9ce8cc
+Sat Mar 21 08:00:17 PM UTC 2026: 
+ exercises.c | 35 +++++++++++++++++++++++++++++++----
+ 1 file changed, 31 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:8: error: unused variable ‘nueva_lista’ [-Werror=unused-variable]
+   68 |    int nueva_lista = 0;
+      |        ^~~~~~~~~~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+5cf6261
+Sat Mar 21 08:00:54 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+d7422e7
+Sun Mar 22 07:53:14 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: ‘nueva_lista’ undeclared (first use in this function); did you mean ‘crea_lista’?
+   74 |    pushFront(nueva_lista, L);
+      |              ^~~~~~~~~~~
+      |              crea_lista
+exercises.c:74:14: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:80:21: error: ‘nuevaLista’ undeclared (first use in this function); did you mean ‘sumaLista’?
+   80 |             suma += nuevaLista[i];
+      |                     ^~~~~~~~~~
+      |                     sumaLista
+exercises.c:84:36: error: expected ‘)’ before ‘;’ token
+   84 |             pushCurrent(nueva_lista; L);
+      |                        ~           ^
+      |                                    )
+exercises.c:84:13: error: too few arguments to function ‘pushCurrent’
+   84 |             pushCurrent(nueva_lista; L);
+      |             ^~~~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:23:6: note: declared here
+   23 | void pushCurrent(List *L, void *dato);
+      |      ^~~~~~~~~~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+10a2372
+Sun Mar 22 07:53:39 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: ‘nueva_lista’ undeclared (first use in this function); did you mean ‘crea_lista’?
+   74 |    pushFront(nueva_lista, L);
+      |              ^~~~~~~~~~~
+      |              crea_lista
+exercises.c:74:14: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:80:21: error: ‘nuevaLista’ undeclared (first use in this function); did you mean ‘sumaLista’?
+   80 |             suma += nuevaLista[i];
+      |                     ^~~~~~~~~~
+      |                     sumaLista
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+803867a
+Sun Mar 22 07:53:59 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ makes pointer from integer without a cast [-Wint-conversion]
+   74 |    pushFront(nueva_lista, L);
+      |              ^~~~~~~~~~~
+      |              |
+      |              int
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:21: error: ‘nuevaLista’ undeclared (first use in this function); did you mean ‘nueva_lista’?
+   80 |             suma += nuevaLista[i];
+      |                     ^~~~~~~~~~
+      |                     nueva_lista
+exercises.c:80:21: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+f02ec9b
+Sun Mar 22 07:54:49 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ makes pointer from integer without a cast [-Wint-conversion]
+   74 |    pushFront(nueva_lista, L);
+      |              ^~~~~~~~~~~
+      |              |
+      |              int
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+347cb76
+Sun Mar 22 07:55:27 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ makes pointer from integer without a cast [-Wint-conversion]
+   74 |    pushFront(nueva_lista, &L);
+      |              ^~~~~~~~~~~
+      |              |
+      |              int
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+9f3bc63
+Sun Mar 22 07:58:22 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |    pushFront(nueva_lista, &L);
+      |              ^~~~~~~~~~~
+      |              |
+      |              int *
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int *’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ from incompatible pointer type [-Wincompatible-pointer-types]
+   84 |             pushCurrent(nueva_lista, &L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int *
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int *’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+61b8b75
+Sun Mar 22 07:59:23 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: invalid type argument of unary ‘*’ (have ‘int’)
+   74 |    pushFront(*nueva_lista, &L);
+      |              ^~~~~~~~~~~~
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, &L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+In file included from exercises.c:6:
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+0abbda5
+Sun Mar 22 08:00:19 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   74 |    pushFront((int*)nueva_lista, &L);
+      |              ^
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |    pushFront((int*)nueva_lista, &L);
+      |              ^~~~~~~~~~~~~~~~~
+      |              |
+      |              int *
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int *’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, &L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+ce4b791
+Sun Mar 22 08:01:06 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   74 |    pushFront((int*)nueva_lista, &L);
+      |              ^
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |    pushFront((int*)nueva_lista, &L);
+      |              ^~~~~~~~~~~~~~~~~
+      |              |
+      |              int *
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int *’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   84 |             pushCurrent((int*)nueva_lista, &L);
+      |                         ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ from incompatible pointer type [-Wincompatible-pointer-types]
+   84 |             pushCurrent((int*)nueva_lista, &L);
+      |                         ^~~~~~~~~~~~~~~~~
+      |                         |
+      |                         int *
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int *’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+0149c27
+Sun Mar 22 08:02:17 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:74:14: error: passing argument 1 of ‘pushFront’ makes pointer from integer without a cast [-Wint-conversion]
+   74 |    pushFront(nueva_lista, &L);
+      |              ^~~~~~~~~~~
+      |              |
+      |              int
+In file included from exercises.c:6:
+arraylist.h:17:22: note: expected ‘List *’ but argument is of type ‘int’
+   17 | void pushFront(List *L, void *dato);
+      |                ~~~~~~^
+exercises.c:80:32: error: subscripted value is neither array nor pointer nor vector
+   80 |             suma += nueva_lista[i];
+      |                                ^
+exercises.c:84:25: error: passing argument 1 of ‘pushCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |             pushCurrent(nueva_lista, &L);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         int
+arraylist.h:23:24: note: expected ‘List *’ but argument is of type ‘int’
+   23 | void pushCurrent(List *L, void *dato);
+      |                  ~~~~~~^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+fb4d04a
+Sun Mar 22 08:03:48 PM UTC 2026: 
+ exercises.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:112:16: error: comparison between pointer and integer [-Werror]
+  112 |          if (L == elem)
+      |                ^~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:163:1: error: control reaches end of non-void function [-Werror=return-type]
+  163 | }
+      | ^
+cc1: all warnings being treated as errors
+51e4f1f
+Sun Mar 22 08:04:40 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:112:17: error: comparison between pointer and integer [-Werror]
+  112 |          if (&L == elem)
+      |                 ^~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:163:1: error: control reaches end of non-void function [-Werror=return-type]
+  163 | }
+      | ^
+cc1: all warnings being treated as errors
+4a28a23
+Sun Mar 22 08:05:26 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:112:19: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  112 |          if (L == (int*)elem)
+      |                   ^
+exercises.c:112:16: error: comparison of distinct pointer types lacks a cast [-Werror=compare-distinct-pointer-types]
+  112 |          if (L == (int*)elem)
+      |                ^~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:163:1: error: control reaches end of non-void function [-Werror=return-type]
+  163 | }
+      | ^
+cc1: all warnings being treated as errors
+c7aaf3e
+Sun Mar 22 08:33:09 PM UTC 2026: 
+ exercises.c | 52 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 49 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:170:24: error: comparison between pointer and integer [-Werror]
+  170 |          if (cadena[i] == "(" || cadena[i] == "{" || cadena[i] == "[")
+      |                        ^~
+exercises.c:170:24: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:170:44: error: comparison between pointer and integer [-Werror]
+  170 |          if (cadena[i] == "(" || cadena[i] == "{" || cadena[i] == "[")
+      |                                            ^~
+exercises.c:170:44: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:170:64: error: comparison between pointer and integer [-Werror]
+  170 |          if (cadena[i] == "(" || cadena[i] == "{" || cadena[i] == "[")
+      |                                                                ^~
+exercises.c:170:64: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:175:33: error: comparison between pointer and integer [-Werror]
+  175 |                   if (cadena[i] == "(" && cadena[j] == ")")
+      |                                 ^~
+exercises.c:175:33: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:175:53: error: comparison between pointer and integer [-Werror]
+  175 |                   if (cadena[i] == "(" && cadena[j] == ")")
+      |                                                     ^~
+exercises.c:175:53: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:177:43: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  177 |                      push(pila, (cadena[i], cadena[j]));
+      |                                           ^
+exercises.c:177:43: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  177 |                      push(pila, (cadena[i], cadena[j]));
+      |                                 ~~~~~~~~~~^~~~~~~~~~~~
+      |                                           |
+      |                                           char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:180:38: error: comparison between pointer and integer [-Werror]
+  180 |                   else if (cadena[i] == "{" && cadena[j] == "}")
+      |                                      ^~
+exercises.c:180:38: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:180:58: error: comparison between pointer and integer [-Werror]
+  180 |                   else if (cadena[i] == "{" && cadena[j] == "}")
+      |                                                          ^~
+exercises.c:180:58: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:182:43: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  182 |                      push(pila, (cadena[i], cadena[j]));
+      |                                           ^
+exercises.c:182:43: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  182 |                      push(pila, (cadena[i], cadena[j]));
+      |                                 ~~~~~~~~~~^~~~~~~~~~~~
+      |                                           |
+      |                                           char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:185:38: error: comparison between pointer and integer [-Werror]
+  185 |                   else if (cadena[i] == "[" && cadena[j] == "]")
+      |                                      ^~
+exercises.c:185:38: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:185:58: error: comparison between pointer and integer [-Werror]
+  185 |                   else if (cadena[i] == "[" && cadena[j] == "]")
+      |                                                          ^~
+exercises.c:185:58: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:187:43: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  187 |                      push(pila, (cadena[i], cadena[j]));
+      |                                           ^
+exercises.c:187:43: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  187 |                      push(pila, (cadena[i], cadena[j]));
+      |                                 ~~~~~~~~~~^~~~~~~~~~~~
+      |                                           |
+      |                                           char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+1420846
+Sun Mar 22 08:34:09 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:209:1: error: control reaches end of non-void function [-Werror=return-type]
+  209 | }
+      | ^
+cc1: all warnings being treated as errors
+a5d6b81
+Mon Mar 23 08:44:27 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c:161:1: error: expected identifier or ‘(’ before ‘{’ token
+  161 | {
+      | ^
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:9: error: implicit declaration of function ‘parentesisBalanceados’; did you mean ‘test_parentesis_balanceados’? [-Wimplicit-function-declaration]
+  217 |     if(!parentesisBalanceados(s)){
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         test_parentesis_balanceados
+863aa30
+Mon Mar 23 08:45:11 PM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:9: error: implicit declaration of function ‘parentesisBalanceados’; did you mean ‘test_parentesis_balanceados’? [-Wimplicit-function-declaration]
+  217 |     if(!parentesisBalanceados(s)){
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         test_parentesis_balanceados
+5ceae1e
+Mon Mar 23 08:45:57 PM UTC 2026: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:209:1: error: control reaches end of non-void function [-Werror=return-type]
+  209 | }
+      | ^
+cc1: all warnings being treated as errors
+3352baa
